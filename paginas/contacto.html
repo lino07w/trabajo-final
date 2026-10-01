@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - TechCare Solutions</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>TechCare <span>Solutions</span></h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="contacto.html" class="activo">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor-principal">
+        <main>
+            <h2 class="titulo-seccion">Formulario de Registro y Cotización</h2>
+            <form class="formulario-contacto" action="#" method="post">
+                <div class="campo">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
+                </div>
+                <div class="campo">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" required placeholder="correo@ejemplo.com">
+                </div>
+                <div class="campo">
+                    <label for="servicio">Servicio Requerido:</label>
+                    <select id="servicio" name="servicio">
+                        <option value="mantenimiento">Mantenimiento Preventivo</option>
+                        <option value="soporte">Soporte Técnico Remoto</option>
+                        <option value="reparacion">Reparación de Hardware</option>
+                        <option value="compra">Compra de Repuestos</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="mensaje">Detalle de la Consulta:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describa el problema de su equipo..."></textarea>
+                </div>
+                <button type="submit" class="boton-accion">Enviar Solicitud</button>
+            </form>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 TechCare Solutions - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
