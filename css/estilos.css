@@ -2,6 +2,21 @@
    ESTILOS GENERALES Y RESPONSIVOS - TECHCARE SOLUTIONS (CIBERTEC)
    ========================================================================== */
 
+:root {
+    --color-fondo: #f4f4f9;
+    --color-texto: #333333;
+    --color-primario: #002B49;
+    --color-secundario: #005088;
+    --color-acento: #00A8E8;
+    --color-blanco: #ffffff;
+    --color-superficie: #fafafa;
+    --color-borde: #e0e0e0;
+    --color-borde-formulario: #ccc;
+    --color-sombra-nav: rgba(0, 0, 0, 0.1);
+    --color-sombra-superficie: rgba(0, 0, 0, 0.05);
+    --color-borde-movil: rgba(255, 255, 255, 0.1);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,15 +25,18 @@
 }
 
 body {
-    background-color: #f4f4f9;
-    color: #333333;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
     line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Encabezado Principal */
 header {
-    background-color: #002B49;
-    color: #ffffff;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
@@ -32,7 +50,7 @@ header .logo h1 {
 }
 
 header .logo span {
-    color: #00A8E8;
+    color: var(--color-acento);
 }
 
 header .buscador input[type="text"] {
@@ -44,8 +62,8 @@ header .buscador input[type="text"] {
 
 /* Menú de Navegación con Efecto Hover */
 nav {
-    background-color: #005088;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: var(--color-secundario);
+    box-shadow: 0 4px 6px var(--color-sombra-nav);
 }
 
 nav ul {
@@ -57,7 +75,7 @@ nav ul {
 
 nav ul li a {
     display: block;
-    color: #ffffff;
+    color: var(--color-blanco);
     text-decoration: none;
     padding: 14px 24px;
     font-weight: bold;
@@ -65,13 +83,15 @@ nav ul li a {
 }
 
 nav ul li a:hover, nav ul li a.activo {
-    background-color: #00A8E8;
-    color: #002B49;
+    background-color: var(--color-acento);
+    color: var(--color-primario);
 }
 
 /* Estructura Principal de Contenido (Flexbox) */
 .contenedor-principal {
     max-width: 1200px;
+    width: 100%;
+    flex: 1;
     margin: 30px auto;
     padding: 0 20px;
     display: flex;
@@ -80,24 +100,24 @@ nav ul li a:hover, nav ul li a.activo {
 
 main {
     flex: 3;
-    background: #ffffff;
+    background: var(--color-blanco);
     padding: 25px;
     border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px var(--color-sombra-superficie);
 }
 
 aside {
     flex: 1;
-    background: #ffffff;
+    background: var(--color-blanco);
     padding: 20px;
     border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px var(--color-sombra-superficie);
 }
 
 /* Elementos Comunes y Componentes */
 h2.titulo-seccion {
-    color: #002B49;
-    border-bottom: 2px solid #00A8E8;
+    color: var(--color-primario);
+    border-bottom: 2px solid var(--color-acento);
     padding-bottom: 8px;
     margin-bottom: 20px;
 }
@@ -124,11 +144,11 @@ h2.titulo-seccion {
 }
 
 .tarjeta {
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--color-borde);
     border-radius: 6px;
     padding: 15px;
     text-align: center;
-    background-color: #fafafa;
+    background-color: var(--color-superficie);
 }
 
 .tarjeta img {
@@ -141,8 +161,8 @@ h2.titulo-seccion {
 
 .boton-accion {
     display: inline-block;
-    background-color: #002B49;
-    color: #ffffff;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
     padding: 8px 16px;
     text-decoration: none;
     border-radius: 4px;
@@ -151,8 +171,8 @@ h2.titulo-seccion {
 }
 
 .boton-accion:hover {
-    background-color: #00A8E8;
-    color: #002B49;
+    background-color: var(--color-acento);
+    color: var(--color-primario);
 }
 
 /* Formularios */
@@ -171,17 +191,17 @@ h2.titulo-seccion {
 .formulario-contacto textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-borde-formulario);
     border-radius: 4px;
 }
 
 /* Pie de Página */
 footer {
-    background-color: #002B49;
-    color: #ffffff;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
+    margin-top: 0;
 }
 
 footer .redes-sociales {
@@ -189,9 +209,25 @@ footer .redes-sociales {
 }
 
 footer .redes-sociales a {
-    color: #00A8E8;
+    color: var(--color-acento);
     margin: 0 10px;
     text-decoration: none;
+    font-weight: bold;
+}
+
+.subtitulo-seccion {
+    color: var(--color-primario);
+}
+
+.titulo-horario {
+    color: var(--color-primario);
+    border-bottom: 1px solid var(--color-borde-formulario);
+    padding-bottom: 5px;
+}
+
+.telefono,
+.precio {
+    color: var(--color-acento);
     font-weight: bold;
 }
 
@@ -226,7 +262,7 @@ footer .redes-sociales a {
     nav ul li a {
         text-align: center;
         padding: 10px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid var(--color-borde-movil);
     }
 
     .grid-3, .grid-2 {
