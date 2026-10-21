@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechCare Solutions - Inicio</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
@@ -9,7 +10,7 @@
 
     <header>
         <div class="logo">
-            <h1>TechCare <span>Solutions</span></h1>
+            <img src="img/logo.png" alt="TechCare Solutions">
         </div>
         <div class="buscador">
             <input type="text" placeholder="Buscar servicios...">
@@ -17,6 +18,11 @@
     </header>
 
     <nav>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir o cerrar menú de navegación">
+        <label for="menu-toggle" class="menu-toggle-label">
+            <span class="icono-menu" aria-hidden="true"></span>
+            <span>Menú</span>
+        </label>
         <ul>
             <li><a href="index.html" class="activo">Home</a></li>
             <li><a href="paginas/nosotros.html">Nosotros</a></li>
@@ -36,19 +42,19 @@
             <h3 class="subtitulo-seccion" style="margin-top:25px;">Nuestras Soluciones Destacadas</h3>
             <div class="grid-3">
                 <div class="tarjeta">
-                    <img src="img/fuente.jpg" alt="Mantenimiento">
+                    <img src="img/Mantenimiento.jpg" alt="Mantenimiento">
                     <h4>Mantenimiento</h4>
                     <p>Limpieza profunda y cambio de pasta térmica.</p>
                     <a href="paginas/servicios.html" class="boton-accion">Ver Detalles</a>
                 </div>
                 <div class="tarjeta">
-                    <img src="img/memoria.jpg" alt="Soporte Remoto">
+                    <img src="img/soporte.jpg" alt="Soporte Remoto">
                     <h4>Soporte Remoto</h4>
                     <p>Asistencia inmediata para diagnóstico de software.</p>
                     <a href="paginas/servicios.html" class="boton-accion">Ver Detalles</a>
                 </div>
                 <div class="tarjeta">
-                    <img src="img/ssd.jpg" alt="Reparación Hardware">
+                    <img src="img/reparacion.jpg" alt="Reparación Hardware">
                     <h4>Reparación Hardware</h4>
                     <p>Reemplazo de placas, memorias y pantallas.</p>
                     <a href="paginas/servicios.html" class="boton-accion">Ver Detalles</a>
@@ -89,7 +95,18 @@
     <footer>
         <p>&copy; 2026 TechCare Solutions - Todos los derechos reservados.</p>
         <div class="redes-sociales">
-            <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">YouTube</a>
+            <a href="https://www.facebook.com/profile.php?id=61592641273362" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.5 1.6-1.5h1.7V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.2v3.2H10V21h3.4z"/></svg>
+                <span>Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/lynatsolutions/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="punto" cx="17.5" cy="6.5" r="1"/></svg>
+                <span>Instagram</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=BCnQGgctQ_Y" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+                <span>YouTube</span>
+            </a>
         </div>
     </footer>
 
